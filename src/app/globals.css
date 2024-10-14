@@ -9,8 +9,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #404a2e;
+    --foreground: #d3dbc9;
   }
 }
 
@@ -24,4 +24,9 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+html{
+  font-family: var(--my-font-family), sans-serif;
 }
