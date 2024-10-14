@@ -2,6 +2,12 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./Components/Navbar";
+import { Work_Sans } from 'next/font/google';
+
+const roboto = Work_Sans({
+    subsets: ['latin'],
+    weight: ['400', '700'],
+})
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${roboto.className}`}
       >
           <Navbar />
           <div className="text-center">

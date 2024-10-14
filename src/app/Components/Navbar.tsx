@@ -3,6 +3,13 @@ import React from 'react'
 import { usePathname } from "next/navigation"
 import Image from 'next/image';
 import CountingDate from './CountingDate';
+import { Playfair_Display } from 'next/font/google';
+
+const inter = Playfair_Display({
+    subsets: ['latin'],
+    weight: ['400', '700'],
+})
+
 
 const Navbar = () => {
     const pathname = usePathname();
@@ -13,7 +20,8 @@ const Navbar = () => {
                     <Image src="https://static.theknot.com/guest-flourish/lockup/initials?firstName=Tony&fianceFirstName=Audrie&themeId=1996" alt=".." width={190} height={190} />
                 </div>
                 <div className="m-8">
-                    <h1 className="text-6xl">Tony & Audrie</h1>
+                    {/* <h1 className={`text-6xl`}>Tony & Audrie</h1> */}
+                    <h1 className={`text-6xl ${inter.className}`}>Tony & Audrie</h1>
                     <div className="text-2xl m-6">
                         <p>SATURDAY, MAY 17, 2025 • JAKARTA, INDONESIA</p>
                         <p><CountingDate /></p>
