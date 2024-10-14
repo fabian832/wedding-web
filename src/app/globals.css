@@ -25,8 +25,3 @@ body {
     text-wrap: balance;
   }
 }
-
-
-html{
-  font-family: var(--my-font-family), sans-serif;
-}
