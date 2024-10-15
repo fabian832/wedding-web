@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Image from "next/image";
 import Navbar from "./Components/Navbar";
 import { Work_Sans } from 'next/font/google';
+import { Playfair_Display } from 'next/font/google';
+import CountingDate from "./Components/CountingDate";
+
+const inter = Playfair_Display({
+    subsets: ['latin'],
+    weight: ['400', '700'],
+})
+
 
 const roboto = Work_Sans({
     subsets: ['latin'],
@@ -35,7 +44,20 @@ export default function RootLayout({
       <body
         className={`${roboto.className}`}
       >
-          <Navbar />
+        <div className="text-center m-8">
+              <div className="flex place-content-center ">
+                  <Image src="https://static.theknot.com/guest-flourish/lockup/initials?firstName=Tony&fianceFirstName=Audrie&themeId=1996" alt=".." width={190} height={190} />
+              </div>
+              <div className="m-8">
+                  {/* <h1 className={`text-6xl`}>Tony & Audrie</h1> */}
+                  <h1 className={`text-6xl ${inter.className}`}>??? & ???</h1>
+                  <div className="text-2xl m-6">
+                      <p>???, ???, ??? • JAKARTA, INDONESIA</p>
+                      <p><CountingDate /></p>
+                  </div>
+              </div>
+              <Navbar />
+          </div>
           <div className="text-center">
             {children}
           </div>
